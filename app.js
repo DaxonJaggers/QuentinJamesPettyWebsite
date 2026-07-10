@@ -26,16 +26,16 @@
   ];
 
   var shopItems = [
+    { name: 'Pinked Paten Leather HandBag', tag: 'handbag — pinked patent leather', price: '$ —', img: 'assets/works/pinked-patent-handbag.jpg', desc: 'High pile cashmere pockets and lining in olive green.' },
     { name: 'Bolo Bag', tag: 'bag', price: '$ —', img: 'assets/works/bolo-bag.jpg' },
+    { name: 'Smocked Silk Weave Self Frame Bag', tag: 'bag — smocked silk weave', price: '$ —', img: 'assets/works/image7.jpg' },
     { name: 'Western Belt', tag: 'belt — western style stitching', price: '$ —', img: 'assets/works/low-waisted-belt.jpg', desc: 'Western style stitching.' },
     { name: 'Low Waisted Belt', tag: 'belt — full veg tan leather', price: '$ —', img: 'assets/works/western-belt.jpg', desc: 'Full veg tan leather belt, found buckles.' },
     { name: 'Dumpling Bag', tag: 'bag', price: '$ —', img: 'assets/works/dumpling-bag.jpg' },
     { name: '1950s Chanute Newspaper Bag', tag: 'bag — reclaimed canvas', price: '$ —', img: 'assets/works/chanute-newspaper-bag.jpg', desc: 'Reclaimed Stella Dallas 1950’s canvas laundry bag, 1940’s Gothic lettering and accurate light yellow nylon strap.' },
     { name: 'Derbs', tag: 'footwear', price: '$ —', img: 'assets/works/image15.jpg' },
     { name: 'Burnished Gat Derbs', tag: 'footwear', price: '$ —', img: 'assets/works/burnished-gat-derbs.jpg' },
-    { name: 'Smocked Silk Weave Self Frame Bag', tag: 'bag — smocked silk weave', price: '$ —', img: 'assets/works/image7.jpg' },
     { name: 'Buffalo Nickel Bag', tag: 'bag', price: '$ —', img: 'assets/works/buffalo-nickel-bag.jpg' },
-    { name: 'Pinked Paten Leather HandBag', tag: 'handbag — pinked patent leather', price: '$ —', img: 'assets/works/pinked-patent-handbag.jpg', desc: 'High pile cashmere pockets and lining in olive green.' },
     { name: 'Caroline Court Shoe', tag: 'footwear', price: '$ —', img: 'assets/works/caroline-court-shoe.jpg' },
     { name: 'Japanese Selvage Denim Dart Pouch', tag: 'pouch — selvage denim', price: '$ —', img: 'assets/works/denim-dart-pouch.jpg' },
     { name: 'Draped Leather Box Clutch', tag: 'clutch — draped leather', price: '$ —', img: 'assets/works/draped-box-clutch.jpg' },
