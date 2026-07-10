@@ -149,7 +149,8 @@
     el.detailName.textContent = item.name;
     el.detailDesc.textContent = item.desc || PLACEHOLDER_DESC;
 
-    if (item.price) {
+    // Price + inquire only ever appear on the Works tab, never on Portfolio.
+    if (view === 'works' && item.price) {
       el.detailPrice.textContent = item.price;
       el.detailPrice.hidden = false;
       el.inquireBtn.hidden = false;
