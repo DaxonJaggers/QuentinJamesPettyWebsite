@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quentin Petty — Portfolio</title>
+<meta name="description" content="Quentin Petty — footwear and fashion prototypes, handmade accessories: purses, belts and bags.">
+<meta property="og:title" content="Quentin Petty — Portfolio">
+<meta property="og:description" content="Footwear &amp; fashion prototypes. Handmade accessories — purses, belts, bags.">
+<meta property="og:image" content="assets/cover.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a09">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/cover.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section id="cover" class="cover" aria-label="Cover">
+  <img class="cover-img" src="assets/cover.jpg" alt="Quentin Petty — hand-signed cover" fetchpriority="high">
+  <div class="cover-meta">
+    <div>QUENTIN&nbsp;PETTY&nbsp;—&nbsp;2026</div>
+    <a href="mailto:quentinpetty04@gmail.com">QUENTINPETTY04@GMAIL.COM</a>
+    <a href="tel:+14053122530">405-312-2530</a>
+  </div>
+  <div class="cover-nav">
+    <button class="cover-btn" data-enter="portfolio">01&nbsp;/&nbsp;PORTFOLIO</button>
+    <button class="cover-btn" data-enter="works">02&nbsp;/&nbsp;WORKS</button>
+  </div>
+</section>
+
+<!-- ============ PAGE SHELL ============ -->
+<div id="page" class="page" hidden>
+  <header class="topbar">
+    <button class="brand" data-go="cover">QUENTIN&nbsp;PETTY</button>
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab" id="tab-portfolio" data-tab="portfolio">PORTFOLIO</button>
+      <button class="tab" id="tab-works" data-tab="works">WORKS</button>
+    </nav>
+  </header>
+
+  <!-- grid -->
+  <main id="grid-view">
+    <div class="page-head">
+      <h1 id="page-title">PORTFOLIO</h1>
+      <div class="page-sub" id="page-sub">FOOTWEAR &amp; FASHION PROTOTYPES</div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <footer class="footer">© QUENTIN PETTY — ALL WORK HANDMADE</footer>
+  </main>
+
+  <!-- detail -->
+  <main id="detail-view" class="detail" hidden>
+    <button class="back-btn" id="back-btn">← BACK</button>
+    <div class="detail-layout">
+      <div class="detail-images" id="detail-images"></div>
+      <aside class="detail-info">
+        <div class="detail-kicker" id="detail-kicker"></div>
+        <h2 id="detail-name"></h2>
+        <div class="detail-price" id="detail-price" hidden></div>
+        <p class="detail-desc" id="detail-desc"></p>
+        <a class="inquire-btn" id="inquire-btn" hidden>INQUIRE&nbsp;TO&nbsp;PURCHASE</a>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<!-- ============ TRANSITION LAYERS ============ -->
+<div id="fx-neg" class="fx" hidden>
+  <img src="assets/cover.jpg" alt="" class="fx-img to-negative">
+  <div class="fx-flash flash-pop"></div>
+</div>
+<div id="fx-wash" class="fx wash-away" hidden>
+  <img src="assets/cover.jpg" alt="" class="fx-img negative">
+</div>
+<div id="fx-blink" class="fx-blink flash-pop" hidden></div>
+
+<!-- ============ FILM GRAIN ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
