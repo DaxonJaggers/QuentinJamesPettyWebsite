@@ -26,9 +26,9 @@
   ];
 
   var shopItems = [
+    { name: 'Bolo Bag', tag: 'bag', price: '$ —', img: 'assets/works/bolo-bag.jpg' },
     { name: 'Western Belt', tag: 'belt — western style stitching', price: '$ —', img: 'assets/works/low-waisted-belt.jpg', desc: 'Western style stitching.' },
     { name: 'Low Waisted Belt', tag: 'belt — full veg tan leather', price: '$ —', img: 'assets/works/western-belt.jpg', desc: 'Full veg tan leather belt, found buckles.' },
-    { name: 'Bolo Bag', tag: 'bag', price: '$ —', img: 'assets/works/bolo-bag.jpg' },
     { name: 'Dumpling Bag', tag: 'bag', price: '$ —', img: 'assets/works/dumpling-bag.jpg' },
     { name: '1950s Chanute Newspaper Bag', tag: 'bag — reclaimed canvas', price: '$ —', img: 'assets/works/chanute-newspaper-bag.jpg', desc: 'Reclaimed Stella Dallas 1950’s canvas laundry bag, 1940’s Gothic lettering and accurate light yellow nylon strap.' },
     { name: 'Derbs', tag: 'footwear', price: '$ —', img: 'assets/works/image15.jpg' },
