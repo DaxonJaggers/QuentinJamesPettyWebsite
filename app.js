@@ -43,7 +43,6 @@
     { name: 'Lunar Boot', tag: 'footwear', img: 'assets/works/image8.jpg' }
   ];
 
-  var PLACEHOLDER_DESC = 'Placeholder description — a few lines about the concept, materials, and process behind this piece. Replace with the real story: what it is, how it was made, and why.';
   var EMAIL = 'quentinpetty04@gmail.com';
 
   var el = {
@@ -139,7 +138,8 @@
     el.backBtn.textContent = '← BACK TO ' + (view === 'works' ? 'WORKS' : 'PORTFOLIO');
     el.detailKicker.textContent = pad(index + 1) + ' / ' + item.tag;
     el.detailName.textContent = item.name;
-    el.detailDesc.textContent = item.desc || PLACEHOLDER_DESC;
+    el.detailDesc.textContent = item.desc || '';
+    el.detailDesc.hidden = !item.desc;
 
     // Inquire only ever appears on the Works tab, never on Portfolio.
     if (view === 'works') {
