@@ -31,4 +31,4 @@ npx serve .
 
 ## Editing content
 
-All portfolio/works items live at the top of `app.js` (`portfolioItems` and `shopItems`). Each item has a name, tag, images and optional description/price. Prices currently show `$ —`; replace with real prices to enable the "Inquire to Purchase" mail link (goes to quentinpetty04@gmail.com).
+All portfolio/works items live at the top of `app.js` (`portfolioItems` and `shopItems`). Each item has a name, tag, images and an optional description. Works items show an "Inquire" mail link (goes to quentinpetty04@gmail.com).

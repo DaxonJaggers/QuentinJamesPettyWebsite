@@ -26,21 +26,21 @@
   ];
 
   var shopItems = [
-    { name: 'Pinked Paten Leather HandBag', tag: 'handbag — pinked patent leather', price: '$ —', img: 'assets/works/pinked-patent-handbag.jpg', desc: 'High pile cashmere pockets and lining in olive green.' },
-    { name: 'Bolo Bag', tag: 'bag', price: '$ —', img: 'assets/works/bolo-bag.jpg' },
-    { name: 'Smocked Silk Weave Self Frame Bag', tag: 'bag — smocked silk weave', price: '$ —', img: 'assets/works/image7.jpg' },
-    { name: 'Western Belt', tag: 'belt — western style stitching', price: '$ —', img: 'assets/works/low-waisted-belt.jpg', desc: 'Western style stitching.' },
-    { name: 'Low Waisted Belt', tag: 'belt — full veg tan leather', price: '$ —', img: 'assets/works/western-belt.jpg', desc: 'Full veg tan leather belt, found buckles.' },
-    { name: 'Dumpling Bag', tag: 'bag', price: '$ —', img: 'assets/works/dumpling-bag.jpg' },
-    { name: '1950s Chanute Newspaper Bag', tag: 'bag — reclaimed canvas', price: '$ —', img: 'assets/works/chanute-newspaper-bag.jpg', desc: 'Reclaimed Stella Dallas 1950’s canvas laundry bag, 1940’s Gothic lettering and accurate light yellow nylon strap.' },
-    { name: 'Derbs', tag: 'footwear', price: '$ —', img: 'assets/works/image15.jpg' },
-    { name: 'Burnished Gat Derbs', tag: 'footwear', price: '$ —', img: 'assets/works/burnished-gat-derbs.jpg' },
-    { name: 'Buffalo Nickel Bag', tag: 'bag', price: '$ —', img: 'assets/works/buffalo-nickel-bag.jpg' },
-    { name: 'Caroline Court Shoe', tag: 'footwear', price: '$ —', img: 'assets/works/caroline-court-shoe.jpg' },
-    { name: 'Japanese Selvage Denim Dart Pouch', tag: 'pouch — selvage denim', price: '$ —', img: 'assets/works/denim-dart-pouch.jpg' },
-    { name: 'Draped Leather Box Clutch', tag: 'clutch — draped leather', price: '$ —', img: 'assets/works/draped-box-clutch.jpg' },
-    { name: 'Cracked Paint Leather Tote', tag: 'tote — cracked paint leather', price: '$ —', img: 'assets/works/cracked-paint-tote.jpg' },
-    { name: 'Lunar Boot', tag: 'footwear', price: '$ —', img: 'assets/works/image8.jpg' }
+    { name: 'Pinked Paten Leather HandBag', tag: 'handbag — pinked patent leather', img: 'assets/works/pinked-patent-handbag.jpg', desc: 'High pile cashmere pockets and lining in olive green.' },
+    { name: 'Bolo Bag', tag: 'bag', img: 'assets/works/bolo-bag.jpg' },
+    { name: 'Smocked Silk Weave Self Frame Bag', tag: 'bag — smocked silk weave', img: 'assets/works/image7.jpg' },
+    { name: 'Western Belt', tag: 'belt — western style stitching', img: 'assets/works/low-waisted-belt.jpg', desc: 'Western style stitching.' },
+    { name: 'Low Waisted Belt', tag: 'belt — full veg tan leather', img: 'assets/works/western-belt.jpg', desc: 'Full veg tan leather belt, found buckles.' },
+    { name: 'Dumpling Bag', tag: 'bag', img: 'assets/works/dumpling-bag.jpg' },
+    { name: '1950s Chanute Newspaper Bag', tag: 'bag — reclaimed canvas', img: 'assets/works/chanute-newspaper-bag.jpg', desc: 'Reclaimed Stella Dallas 1950’s canvas laundry bag, 1940’s Gothic lettering and accurate light yellow nylon strap.' },
+    { name: 'Derbs', tag: 'footwear', img: 'assets/works/image15.jpg' },
+    { name: 'Burnished Gat Derbs', tag: 'footwear', img: 'assets/works/burnished-gat-derbs.jpg' },
+    { name: 'Buffalo Nickel Bag', tag: 'bag', img: 'assets/works/buffalo-nickel-bag.jpg' },
+    { name: 'Caroline Court Shoe', tag: 'footwear', img: 'assets/works/caroline-court-shoe.jpg' },
+    { name: 'Japanese Selvage Denim Dart Pouch', tag: 'pouch — selvage denim', img: 'assets/works/denim-dart-pouch.jpg' },
+    { name: 'Draped Leather Box Clutch', tag: 'clutch — draped leather', img: 'assets/works/draped-box-clutch.jpg' },
+    { name: 'Cracked Paint Leather Tote', tag: 'tote — cracked paint leather', img: 'assets/works/cracked-paint-tote.jpg' },
+    { name: 'Lunar Boot', tag: 'footwear', img: 'assets/works/image8.jpg' }
   ];
 
   var PLACEHOLDER_DESC = 'Placeholder description — a few lines about the concept, materials, and process behind this piece. Replace with the real story: what it is, how it was made, and why.';
@@ -59,7 +59,6 @@
     detailImages: document.getElementById('detail-images'),
     detailKicker: document.getElementById('detail-kicker'),
     detailName: document.getElementById('detail-name'),
-    detailPrice: document.getElementById('detail-price'),
     detailDesc: document.getElementById('detail-desc'),
     inquireBtn: document.getElementById('inquire-btn'),
     backBtn: document.getElementById('back-btn'),
@@ -142,14 +141,11 @@
     el.detailName.textContent = item.name;
     el.detailDesc.textContent = item.desc || PLACEHOLDER_DESC;
 
-    // Price + inquire only ever appear on the Works tab, never on Portfolio.
-    if (view === 'works' && item.price) {
-      el.detailPrice.textContent = item.price;
-      el.detailPrice.hidden = false;
+    // Inquire only ever appears on the Works tab, never on Portfolio.
+    if (view === 'works') {
       el.inquireBtn.hidden = false;
       el.inquireBtn.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Inquiry — ' + item.name);
     } else {
-      el.detailPrice.hidden = true;
       el.inquireBtn.hidden = true;
     }
 
