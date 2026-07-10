@@ -4,13 +4,6 @@
 
   var portfolioItems = [
     {
-      name: 'Ghost Pack',
-      tag: 'footwear pack — irbis / uncia',
-      ar: '1600 / 1143',
-      images: ['assets/portfolio/ghostpack-01.jpg', 'assets/portfolio/ghostpack-02.jpg', 'assets/portfolio/ghostpack-03.jpg', 'assets/portfolio/ghostpack-04.jpg', 'assets/portfolio/ghostpack-05.jpg', 'assets/portfolio/ghostpack-06.jpg', 'assets/portfolio/ghostpack-07.jpg', 'assets/portfolio/ghostpack-08.jpg'],
-      desc: 'Two-model pack inspired by the snow leopard — “Irbis” and “Uncia”. The open-weave upper mimics the leopard’s camouflage; the rosette textile under the forefoot is based on the skeletal structure of its forefoot, arranged to benefit the runner. Thin laser-cut rubber shell, light nylon weave, rubber-wrapped counter, polycarbonate spike plate, dual-density EVA outsole.'
-    },
-    {
       name: 'Group B',
       tag: 'footwear — concept',
       ar: '1600 / 1224',
