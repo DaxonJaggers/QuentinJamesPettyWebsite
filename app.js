@@ -6,12 +6,12 @@
     {
       name: 'Group B',
       ar: '1600 / 1224',
-      images: ['assets/portfolio/groupb-01.jpg', 'assets/portfolio/groupb-02.jpg', 'assets/portfolio/groupb-03.jpg', 'assets/portfolio/groupb-04.jpg', 'assets/portfolio/groupb-05.jpg']
+      images: ['assets/portfolio/groupb-01.jpg', 'assets/portfolio/groupb-02.jpg', 'assets/portfolio/shai002-07.jpg', 'assets/portfolio/shai002-08.jpg', 'assets/portfolio/shai002-09.jpg', 'assets/portfolio/groupb-03.jpg', 'assets/portfolio/groupb-04.jpg', 'assets/portfolio/groupb-05.jpg']
     },
     {
       name: 'Shai 002 Reflect',
       ar: '1600 / 1236',
-      images: ['assets/portfolio/shai002-01.jpg', 'assets/portfolio/shai002-02.jpg', 'assets/portfolio/shai002-03.jpg', 'assets/portfolio/shai002-04.jpg', 'assets/portfolio/shai002-05.jpg', 'assets/portfolio/shai002-06.jpg', 'assets/portfolio/shai002-07.jpg', 'assets/portfolio/shai002-08.jpg', 'assets/portfolio/shai002-09.jpg']
+      images: ['assets/portfolio/shai002-01.jpg', 'assets/portfolio/shai002-02.jpg', 'assets/portfolio/shai002-03.jpg', 'assets/portfolio/shai002-04.jpg', 'assets/portfolio/shai002-05.jpg', 'assets/portfolio/shai002-06.jpg']
     },
     {
       name: 'Star Child',
@@ -64,6 +64,24 @@
 
   var state = { view: 'cover', detailIndex: null, phase: 'idle' };
   var timers = [];
+  var viewer = document.getElementById('image-viewer');
+  var viewerImage = document.getElementById('viewer-image');
+  var viewerCounter = document.getElementById('viewer-counter');
+  var viewerGallery = { images: [], index: 0, name: '' };
+
+  function showViewerImage(index) {
+    viewerGallery.index = (index + viewerGallery.images.length) % viewerGallery.images.length;
+    viewerImage.src = viewerGallery.images[viewerGallery.index];
+    viewerImage.alt = viewerGallery.name + ' - ' + (viewerGallery.index + 1) + ' of ' + viewerGallery.images.length;
+    viewerCounter.textContent = (viewerGallery.index + 1) + ' / ' + viewerGallery.images.length;
+  }
+
+  function openViewer(images, index, name) {
+    viewerGallery = { images: images, index: index, name: name };
+    showViewerImage(index);
+    viewer.showModal();
+    document.documentElement.classList.add('viewer-open');
+  }
 
   function after(ms, fn) { timers.push(setTimeout(fn, ms)); }
   function clearTimers() {
@@ -148,13 +166,12 @@
       img.loading = i < (view === 'portfolio' ? 3 : 2) ? 'eager' : 'lazy';
       img.decoding = 'async';
       if (view === 'portfolio') {
-        var link = document.createElement('a');
+        var link = document.createElement('button');
+        link.type = 'button';
         link.className = 'detail-image-link';
         link.style.aspectRatio = item.ar || '4 / 5';
-        link.href = src;
-        link.target = '_blank';
-        link.rel = 'noopener';
-        link.setAttribute('aria-label', 'Open ' + item.name + ' image ' + (i + 1) + ' full size (new tab)');
+        link.setAttribute('aria-label', 'Enlarge ' + item.name + ' image ' + (i + 1));
+        link.addEventListener('click', function () { openViewer(srcs, i, item.name); });
         link.appendChild(img);
         frag.appendChild(link);
       } else {
@@ -166,6 +183,7 @@
   }
 
   function applyState() {
+    if (viewer.open) viewer.close();
     var onCover = state.view === 'cover';
     el.cover.hidden = !onCover;
     el.page.hidden = onCover;
@@ -298,6 +316,21 @@
   });
   document.querySelector('[data-go="cover"]').addEventListener('click', goCover);
   el.backBtn.addEventListener('click', closeDetail);
+  document.getElementById('viewer-close').addEventListener('click', function () { viewer.close(); });
+  document.getElementById('viewer-prev').addEventListener('click', function () { showViewerImage(viewerGallery.index - 1); });
+  document.getElementById('viewer-next').addEventListener('click', function () { showViewerImage(viewerGallery.index + 1); });
+  viewer.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showViewerImage(viewerGallery.index + (event.key === 'ArrowLeft' ? -1 : 1));
+    }
+  });
+  viewer.addEventListener('click', function (event) {
+    if (event.target === viewer) viewer.close();
+  });
+  viewer.addEventListener('close', function () {
+    document.documentElement.classList.remove('viewer-open');
+  });
 
   routeFromHash();
 })();

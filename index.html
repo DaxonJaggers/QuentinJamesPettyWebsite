@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#0a0a09">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" as="image" href="assets/cover.jpg">
-<link rel="stylesheet" href="styles.css?v=20260929">
+<link rel="stylesheet" href="styles.css?v=20260929-2">
 </head>
 <body>
 
@@ -67,6 +67,16 @@
   </main>
 </div>
 
+<dialog id="image-viewer" class="image-viewer" aria-label="Portfolio image viewer">
+  <div class="viewer-toolbar">
+    <span id="viewer-counter" aria-live="polite"></span>
+    <button id="viewer-prev" type="button" aria-label="Previous image" title="Previous image">&#8592;</button>
+    <button id="viewer-next" type="button" aria-label="Next image" title="Next image">&#8594;</button>
+    <button id="viewer-close" type="button" aria-label="Close image" title="Close image" autofocus>&#215;</button>
+  </div>
+  <img id="viewer-image" alt="">
+</dialog>
+
 <!-- ============ TRANSITION LAYERS ============ -->
 <div id="fx-neg" class="fx" hidden>
   <picture class="fx-picture">
@@ -86,6 +96,6 @@
 <!-- ============ FILM GRAIN ============ -->
 <div class="grain" aria-hidden="true"></div>
 
-<script src="app.js?v=20260929" defer></script>
+<script src="app.js?v=20260929-2" defer></script>
 </body>
 </html>

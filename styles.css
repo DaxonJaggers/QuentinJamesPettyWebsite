@@ -287,6 +287,8 @@ button {
 
 .detail-image-link {
   display: block;
+  width: 100%;
+  cursor: zoom-in;
   min-width: 0;
   aspect-ratio: 4 / 5;
 }
@@ -298,6 +300,53 @@ button {
 
 .detail-image-link img {
   height: 100%;
+  object-fit: contain;
+}
+
+html.viewer-open { overflow: hidden; }
+
+.image-viewer {
+  width: calc(100% - 24px);
+  max-width: 1600px;
+  height: calc(100dvh - 24px);
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.image-viewer[open] {
+  display: grid;
+  grid-template-rows: 52px minmax(0, 1fr);
+}
+
+.image-viewer::backdrop { background: rgba(0, 0, 0, 0.88); }
+
+.viewer-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+}
+
+#viewer-counter { margin-right: auto; font-family: var(--mono); font-size: 13px; }
+
+.viewer-toolbar button {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.viewer-toolbar button:hover { background: var(--line); }
+.viewer-toolbar button:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+
+#viewer-image {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
   object-fit: contain;
 }
 
