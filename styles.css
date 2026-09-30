@@ -220,14 +220,6 @@ button {
   color: var(--muted);
 }
 
-.card-tag {
-  margin-top: 4px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--faint);
-}
-
 .footer {
   padding: 32px 40px 48px 40px;
   font-family: var(--mono);
@@ -270,6 +262,45 @@ button {
 
 .detail-info { position: sticky; top: 100px; }
 
+.detail--portfolio .detail-layout {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+}
+
+.detail--portfolio .detail-info {
+  position: static;
+  order: -1;
+  min-width: 0;
+}
+
+.detail--portfolio .detail-info h2 {
+  font-size: 40px;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.detail--portfolio .detail-images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.detail-image-link {
+  display: block;
+  min-width: 0;
+  aspect-ratio: 4 / 5;
+}
+
+.detail-image-link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.detail-image-link img {
+  height: 100%;
+  object-fit: contain;
+}
+
 .detail-kicker {
   font-family: var(--mono);
   font-size: 12px;
@@ -286,15 +317,6 @@ button {
   text-transform: uppercase;
 }
 
-.detail-desc {
-  margin-top: 24px;
-  max-width: 46ch;
-  font-family: var(--mono);
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--body-copy);
-}
-
 .inquire-btn {
   margin-top: 32px;
   display: inline-block;
@@ -307,6 +329,7 @@ button {
   user-select: none;
 }
 .inquire-btn:hover { background: var(--ink); color: var(--bg); }
+.inquire-btn[hidden] { display: none; }
 
 /* ============ TRANSITIONS ============ */
 .fx {
@@ -398,12 +421,15 @@ button {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
+  .detail--portfolio .detail-images { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .detail-layout { grid-template-columns: 1fr; }
   .detail-info { position: static; order: -1; }
 }
 
 @media (max-width: 560px) {
+  .detail--portfolio .detail-images { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .detail--portfolio .detail-info h2 { font-size: 32px; }
   .grid { grid-template-columns: 1fr; }
   .topbar { padding: 16px 20px; }
   .page-head { padding: 48px 20px 20px 20px; flex-direction: column; align-items: flex-start; }

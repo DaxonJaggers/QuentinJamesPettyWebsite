@@ -5,42 +5,39 @@
   var portfolioItems = [
     {
       name: 'Group B',
-      tag: 'footwear — concept',
       ar: '1600 / 1224',
       images: ['assets/portfolio/groupb-01.jpg', 'assets/portfolio/groupb-02.jpg', 'assets/portfolio/groupb-03.jpg', 'assets/portfolio/groupb-04.jpg', 'assets/portfolio/groupb-05.jpg']
     },
     {
       name: 'Shai 002 Reflect',
-      tag: 'footwear — spring 2027',
       ar: '1600 / 1236',
-      images: ['assets/portfolio/shai002-01.jpg', 'assets/portfolio/shai002-02.jpg', 'assets/portfolio/shai002-03.jpg', 'assets/portfolio/shai002-04.jpg', 'assets/portfolio/shai002-05.jpg', 'assets/portfolio/shai002-06.jpg'],
-      desc: 'Spring 2027. Colorways: Slate Grey Noir, Misted Shore, Brushed Steel Ash. EVA upper with perforated inlay, thermoplastic toe motif heat-fused along the side strip only, TPU counter and eyelets, fine-mesh foam-padded collar, vulcanized rubber.'
+      images: ['assets/portfolio/shai002-01.jpg', 'assets/portfolio/shai002-02.jpg', 'assets/portfolio/shai002-03.jpg', 'assets/portfolio/shai002-04.jpg', 'assets/portfolio/shai002-05.jpg', 'assets/portfolio/shai002-06.jpg', 'assets/portfolio/shai002-07.jpg', 'assets/portfolio/shai002-08.jpg', 'assets/portfolio/shai002-09.jpg']
     },
     {
       name: 'Star Child',
-      tag: 'footwear — 3 colorways',
       ar: '1035 / 1600',
-      images: ['assets/portfolio/starchild-01.jpg', 'assets/portfolio/starchild-02.jpg', 'assets/portfolio/starchild-03.jpg', 'assets/portfolio/starchild-04.jpg', 'assets/portfolio/starchild-05.jpg', 'assets/portfolio/starchild-06.jpg', 'assets/portfolio/starchild-07.jpg', 'assets/portfolio/starchild-08.jpg', 'assets/portfolio/starchild-09.jpg'],
-      desc: 'Colorways “Doris”, “Marilyn” and “Judy”. Vulcanized rubber — treated with sulfur and heat for strength, flexibility and durability; the vulcanization process creates chemical links between the rubber molecules, helping the material resist wear, cracking and deformation.'
+      images: ['assets/portfolio/starchild-01.jpg', 'assets/portfolio/starchild-02.jpg', 'assets/portfolio/starchild-03.jpg', 'assets/portfolio/starchild-04.jpg', 'assets/portfolio/starchild-05.jpg', 'assets/portfolio/starchild-06.jpg', 'assets/portfolio/starchild-07.jpg', 'assets/portfolio/starchild-08.jpg', 'assets/portfolio/starchild-09.jpg']
     }
   ];
 
   var shopItems = [
-    { name: 'Pinked Paten Leather HandBag', tag: 'handbag — pinked patent leather', img: 'assets/works/pinked-patent-handbag.jpg', desc: 'High pile cashmere pockets and lining in olive green.' },
-    { name: 'Bolo Bag', tag: 'bag', img: 'assets/works/bolo-bag.jpg' },
-    { name: 'Smocked Silk Weave Self Frame Bag', tag: 'bag — smocked silk weave', img: 'assets/works/image7.jpg' },
-    { name: 'Western Belt', tag: 'belt — western style stitching', img: 'assets/works/low-waisted-belt.jpg', desc: 'Western style stitching.' },
-    { name: 'Low Waisted Belt', tag: 'belt — full veg tan leather', img: 'assets/works/western-belt.jpg', desc: 'Full veg tan leather belt, found buckles.' },
-    { name: 'Dumpling Bag', tag: 'bag', img: 'assets/works/dumpling-bag.jpg' },
-    { name: '1950s Chanute Newspaper Bag', tag: 'bag — reclaimed canvas', img: 'assets/works/chanute-newspaper-bag.jpg', desc: 'Reclaimed Stella Dallas 1950’s canvas laundry bag, 1940’s Gothic lettering and accurate light yellow nylon strap.' },
-    { name: 'Derbs', tag: 'footwear', img: 'assets/works/image15.jpg' },
-    { name: 'Burnished Gat Derbs', tag: 'footwear', img: 'assets/works/burnished-gat-derbs.jpg' },
-    { name: 'Buffalo Nickel Bag', tag: 'bag', img: 'assets/works/buffalo-nickel-bag.jpg' },
-    { name: 'Caroline Court Shoe', tag: 'footwear', img: 'assets/works/caroline-court-shoe.jpg' },
-    { name: 'Japanese Selvage Denim Dart Pouch', tag: 'pouch — selvage denim', img: 'assets/works/denim-dart-pouch.jpg' },
-    { name: 'Draped Leather Box Clutch', tag: 'clutch — draped leather', img: 'assets/works/draped-box-clutch.jpg' },
-    { name: 'Cracked Paint Leather Tote', tag: 'tote — cracked paint leather', img: 'assets/works/cracked-paint-tote.jpg' },
-    { name: 'Lunar Boot', tag: 'footwear', img: 'assets/works/image8.jpg' }
+    { name: 'Full Grain Zip Boot', images: ['assets/works/full-grain-zip-boot.png', 'assets/works/full-grain-zip-boot-02.png'] },
+    { name: 'Pleated Staple Flats', img: 'assets/works/pleated-staple-flats.png' },
+    { name: 'Pinked Paten Leather HandBag', img: 'assets/works/pinked-patent-handbag.jpg' },
+    { name: 'Bolo Bag', img: 'assets/works/bolo-bag.jpg' },
+    { name: 'Smocked Silk Weave Self Frame Bag', img: 'assets/works/image7.jpg' },
+    { name: 'Western Belt', img: 'assets/works/low-waisted-belt.jpg' },
+    { name: 'Low Waisted Belt', img: 'assets/works/western-belt.jpg' },
+    { name: 'Dumpling Bag', img: 'assets/works/dumpling-bag.jpg' },
+    { name: '1950s Chanute Newspaper Bag', img: 'assets/works/chanute-newspaper-bag.jpg' },
+    { name: 'Derbs', img: 'assets/works/image15.jpg' },
+    { name: 'Burnished Gat Derbs', img: 'assets/works/burnished-gat-derbs.jpg' },
+    { name: 'Buffalo Nickel Bag', img: 'assets/works/buffalo-nickel-bag.jpg' },
+    { name: 'Caroline Court Shoe', img: 'assets/works/caroline-court-shoe.jpg' },
+    { name: 'Japanese Selvage Denim Dart Pouch', img: 'assets/works/denim-dart-pouch.jpg' },
+    { name: 'Draped Leather Box Clutch', img: 'assets/works/draped-box-clutch.jpg' },
+    { name: 'Cracked Paint Leather Tote', img: 'assets/works/cracked-paint-tote.jpg' },
+    { name: 'Lunar Boot', img: 'assets/works/image8.jpg' }
   ];
 
   var EMAIL = 'quentinpetty04@gmail.com';
@@ -58,7 +55,6 @@
     detailImages: document.getElementById('detail-images'),
     detailKicker: document.getElementById('detail-kicker'),
     detailName: document.getElementById('detail-name'),
-    detailDesc: document.getElementById('detail-desc'),
     inquireBtn: document.getElementById('inquire-btn'),
     backBtn: document.getElementById('back-btn'),
     fxNeg: document.getElementById('fx-neg'),
@@ -120,11 +116,6 @@
       row.appendChild(num);
       card.appendChild(row);
 
-      var tag = document.createElement('div');
-      tag.className = 'card-tag';
-      tag.textContent = item.tag;
-      card.appendChild(tag);
-
       frag.appendChild(card);
     });
     el.grid.replaceChildren(frag);
@@ -135,11 +126,10 @@
     var item = list[index];
     if (!item) return;
 
+    el.detailView.classList.toggle('detail--portfolio', view === 'portfolio');
     el.backBtn.textContent = '← BACK TO ' + (view === 'works' ? 'WORKS' : 'PORTFOLIO');
-    el.detailKicker.textContent = pad(index + 1) + ' / ' + item.tag;
+    el.detailKicker.textContent = pad(index + 1);
     el.detailName.textContent = item.name;
-    el.detailDesc.textContent = item.desc || '';
-    el.detailDesc.hidden = !item.desc;
 
     // Inquire only ever appears on the Works tab, never on Portfolio.
     if (view === 'works') {
@@ -155,10 +145,22 @@
       var img = document.createElement('img');
       img.src = src;
       img.alt = item.name + ' — ' + (i + 1) + ' of ' + srcs.length;
-      img.loading = i < 2 ? 'eager' : 'lazy';
+      img.loading = i < (view === 'portfolio' ? 3 : 2) ? 'eager' : 'lazy';
       img.decoding = 'async';
-      img.style.aspectRatio = item.images ? (item.ar || '4 / 5') : '4 / 5';
-      frag.appendChild(img);
+      if (view === 'portfolio') {
+        var link = document.createElement('a');
+        link.className = 'detail-image-link';
+        link.style.aspectRatio = item.ar || '4 / 5';
+        link.href = src;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.setAttribute('aria-label', 'Open ' + item.name + ' image ' + (i + 1) + ' full size (new tab)');
+        link.appendChild(img);
+        frag.appendChild(link);
+      } else {
+        img.style.aspectRatio = '4 / 5';
+        frag.appendChild(img);
+      }
     });
     el.detailImages.replaceChildren(frag);
   }
